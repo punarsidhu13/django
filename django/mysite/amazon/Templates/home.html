@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>AMAZON</title>
+</head>
+<body>
+    
+        
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-info navbar-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="">Amazon</a>
+
+        <!-- Icons -->
+        <ul class="navbar-nav d-flex flex-row me-1">
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link text-white" href="{% url 'create_inv' %}"><i class="fas fa-envelope mx-1"></i> Add</a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link text-white" href="{% url 'list_inventory' %}"><i class="fas fa-cog mx-1"></i>List</a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" style="color: black;"href="{% url 'register' %}"><i class="fas fa-cog mx-1"></i>Register</a>
+            </li>  
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link" style="color: black;" href="{% url 'LoginUser' %}"><i class="fas fa-cog mx-1"></i>Log in</a>
+            </li>
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link text-white" href="{% url 'LogOut' %}"><i class="fas fa-cog mx-1"></i>Log Out</a>
+            </li>  
+            <li class="nav-item me-3 me-lg-0">
+                <a class="nav-link text-white" href="{% url 'cart' %}"><i class="fas fa-cog mx-1"></i>My Cart</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Container wrapper -->
+</nav>
+
+<header>
+    <style>
+        #intro {
+          background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+          height: 100vh;
+        }
+    </style>
+    <div id="intro" class="bg-image shadow-2-strong">
+        <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+            <div class="container">
+                <div class="row justify-content-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

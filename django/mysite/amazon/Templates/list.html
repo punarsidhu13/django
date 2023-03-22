@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIST</title>
+</head>
+
+<header>
+    <style>
+        #intro {
+          background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+          height: 100vh;
+        }
+        /* Height for devices larger than 576px */
+      
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+    <div id="intro" class="bg-image shadow-2-strong">
+        <div  class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8); margin-left: -7px;">
+            <div class="container">
+                <div> 
+                    {% for list in lists %}
+                        <h3 style="color: rgb(225, 192, 192); font-size: 30px; margin-left: 15px; margin-top: 9px;">{{list.name}}</h3>
+                        <p style="font-size: 18px; color: beige;margin-left: 15px;">Price: Rs {{list.price}}</p>
+                        <p style="font-weight: bold; color: beige;margin-left: 15px;">Quantity: {{list.quantity}}</p> 
+                        <br>
+                        <a style="color: coral;margin-left: 15px;" href="/Amazon/{{list.pk}}/AddToCart">Add to cart</a>
+                    <hr>
+                    {% empty %}
+                    <p style="color: brown; font-size: larger;">Inventory is empty.</p> <a href="/Amazon/create_inventory">Add to Inventory</a>
+                
+                    {% endfor %}
+                </div>
+                <div class="row justify-content-center">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<body>
+     
+</body>
+</html>

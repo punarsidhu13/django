@@ -1,0 +1,20 @@
+
+
+<div>
+    {% if error_message %}
+    <p style = "color:blueviolet">{{error_message}}</p>
+    {% endif %}
+
+    {% for blog in blogs %}
+        <h3 style="color: brown; font-size: 30px;">{{blog.title}}</h3>
+        <!-- <p style="font-weight: bold; font-size: 22px;">{{blog.author}}</p> -->
+        <p style="font-size: 18px;">{{blog.description}}</p>
+        <em style="font-weight: bold;">by {{blog.author}}</em> 
+        <br><br>
+        <a href="/blogs/{{blog.pk}}/update">Edit</a> || <a href='/blogs/{{blog.pk}}/delete'>Delete</a>
+    <hr><hr>
+    {% empty %}
+    <p style="color: brown; font-size: larger;">Blogs Table is empty.</p> <a href="create/blog">Create Blog</a> -->
+
+    {% endfor %}
+</div> 

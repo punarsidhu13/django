@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>AMAZON</title>
+</head>
+<body>
+    
+<header>
+    <style>
+      #intro {
+        background-image: url(https://mdbootstrap.com/img/new/fluid/city/008.jpg);
+        height: 100vh;
+      }
+
+      /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .navbar .nav-link {
+        color: #fff !important;
+      }
+    </style>
+
+
+    <!-- Navbar -->
+
+    <!-- Background image -->
+    <div id="intro" class="bg-image shadow-2-strong">
+      <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8);">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-xl-5 col-md-8">
+
+{% block content %}
+
+
+<div class="container py-5">
+    <h1>Register</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="name" style="color: #fff;">Enter Username</label>
+        <p>{{form.username}}</p>
+        <br>
+        <label for="name" style="color: #fff;" >Enter Email</label>
+        <p>{{form.email}}</p>
+        <br>
+        <label for="name"style="color: #fff;">Enter password</label>
+        <p>{{form.password}}</p>
+        <br>
+        <button class="btn btn-primary" type="submit">Register</button>
+    </form>
+    <p class="text-center" style="color: #fff; margin-left: -260px; margin-top: 20px;">If you already have an <br> account, <a href="/Amazon/LoginUser">login</a> instead.</p>
+</div>
+{% endblock %}
